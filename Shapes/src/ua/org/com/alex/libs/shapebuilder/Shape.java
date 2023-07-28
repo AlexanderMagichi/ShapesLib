@@ -31,45 +31,40 @@ public class Shape {
 
 	
 	
-	
-	 public class ReverseTriangleBuilder {
-	        private int sizeReverseTriangle;
-	        private char[][] triangle;
-			private char[][] reverseTriangle;
+	public class ReverseTriangleBuilder {
+		private int sizeReverseTriangle;
+		private char[][] triangle;
+		private char[][] reverseTriangle;
 
-	        public ReverseTriangleBuilder(int size) {
-	            this.sizeReverseTriangle = size;
-	            this.reverseTriangle = new char[size][size];
-	        }
+		// переменная в которую надо из фронта подставить значение ReverseTriangleBuilder
+		public ReverseTriangleBuilder(int size) {
+			this.sizeReverseTriangle = size;
+			this.reverseTriangle = new char[size][size];
+		}
 
-	        public void buildReverseTriangle() {
-	        	   for (int i = 0; i < sizeReverseTriangle; i++) {
-	        	        for (int j = 0; j < sizeReverseTriangle; j++) {
-	        	            if (j >= sizeReverseTriangle - i - 1) {
-	        	                reverseTriangle[i][j] = '*';
-	        	            } else {
-	        	                reverseTriangle[i][j] = ' ';
-	                    }
-	                }
-	            }
-	        }
+		public void buildReverseTriangle() {
+			for (int i = 0; i < sizeReverseTriangle; i++) {
+				for (int j = 0; j < sizeReverseTriangle; j++) {
+					if (j >= sizeReverseTriangle - i - 1) {
+						reverseTriangle[i][j] = '*';
+					} else {
+						reverseTriangle[i][j] = ' ';
+					}
+				}
+			}
+		}
 
-	        public char[][] getReverseTriangle() {
-	            return reverseTriangle;
-	        }
-	    }
+		public char[][] getReverseTriangle() {
+			return reverseTriangle;
+		}
+	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
+
 	public class SquareBuilder {
 		private int sizeSquare;
 		private char[][] square;
+
 		// переменная в которую надо из фронта подставить значение SquareBuilder
 		public SquareBuilder(int size) {
 			this.sizeSquare = size;
@@ -90,15 +85,12 @@ public class Shape {
 		}
 	}
 
-
 	
 	
-	
-
 	public class HollowSquareBuilder {
 		private int sizeHollowSquare;
 		private char[][] hollowSquare;
-		
+
 		// переменная в которую надо из фронта подставить значение HollowSquareBuilder
 		public HollowSquareBuilder(int size) {
 			this.sizeHollowSquare = size;
@@ -124,10 +116,6 @@ public class Shape {
 
 		}
 	}
-
-
-	
-	
 	
 	
 
@@ -135,8 +123,9 @@ public class Shape {
 		private int sizeRow;
 		private int sizeColumn;
 		private char[][] rectangle;
-		
-		// переменная в которую надо из фронта подставить 2 значения RectangleBuilder(int rows, int columns)
+
+		// переменная в которую надо из фронта подставить 2 значения
+		// RectangleBuilder(int rows, int columns)
 		public RectangleBuilder(int rows, int columns) {
 			this.sizeRow = rows;
 			this.sizeColumn = columns;
@@ -156,6 +145,4 @@ public class Shape {
 		}
 	}
 
-
-	}
-	
+}
