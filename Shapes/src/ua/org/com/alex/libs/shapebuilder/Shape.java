@@ -6,7 +6,8 @@ public class Shape {
 		private int sizeTriangle;
 		private char[][] triangle;
 
-		// переменная в которую надо из фронта подставить значение TriangleBuilder
+		// переменная в которую надо из фронта подставить значение 
+//		TriangleBuilder
 		public TriangleBuilder(int size) {
 			this.sizeTriangle = size;
 			this.triangle = new char[size][size];
