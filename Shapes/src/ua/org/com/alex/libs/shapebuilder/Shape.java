@@ -1,7 +1,7 @@
 package ua.org.com.alex.libs.shapebuilder;
 
 public class Shape {
-//	меняю тип на стринг
+
 	public class TriangleBuilder {
 		private int sizeTriangle;
 		private char[][] triangle;
