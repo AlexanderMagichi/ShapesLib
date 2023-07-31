@@ -2,65 +2,68 @@ package ua.org.com.alex.parentsclasses;
 
 public abstract class SuperShapes {
 
-	private String name;
-	private int size;
-	private char pouring;
-	private char fillsymbol;
+    private String name;
+    private int size;
+    private char pouring;
+    private char spaceSymbol;
+    private char symbol;
 
-	public abstract double calculatePerimeter();
+    protected SuperShapes(String name, int size, char pouring, char symbol, char spaceSymbol) {
+        this.name = name;
+        this.size = size;
+        this.pouring = pouring;
+        this.symbol = symbol;
+       
+    }
 
-	public abstract double calculateArea();
+    public String getName() {
+        return name;
+    }
 
-	protected SuperShapes(String name, int size, char pouring, char fillsymbol) {
-	        this.name = name;
-	        this.size = size;
-	        this.pouring = pouring;
-	        this.fillsymbol = fillsymbol;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	@Override
-	public String toString() {
-	    String result = "Тип фигуры: " + name + "\n";
-	    result += "Размер: " + size + "\n";
-	    result += "Заливка: " + pouring + "\n";
-	    result += "Символ заливки: " + fillsymbol + "\n";
-	    result += "Площадь: " + calculateArea() + "\n";
-	    result += "Периметр: " + calculatePerimeter() + "\n";
-	    return result;
-	}
+    public int getSize() {
+        return size;
+    }
 
-	public String getName() {
+    public void setSize(int size) {
+        this.size = size;
+    }
 
-		return name;
-	}
+    public char getPouring() {
+        return pouring;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setPouring(char pouring) {
+        this.pouring = pouring;
+    }
 
-	public int getSize() {
-		return size;
-	}
+    public char getSymbol() {
+        return symbol;
+    }
 
-	public void setSize(int size) {
-		this.size = size;
-	}
+    public void setSymbol(char symbol) {
+        this.symbol = symbol;
+    }
 
-	public char pouring() {
-		return pouring;
-	}
+    public char getSpaceSymbol() {
+        return spaceSymbol;
+    }
 
-	public void pouring(char pouring) {
-		this.pouring = pouring;
-	}
+    public void setSpaceSymbol(char spaceSymbol) {
+        this.spaceSymbol = spaceSymbol;
+    }
 
-	public char fillsymbol() {
-		return pouring;
-	}
 
-	public void fillsymbol(char fillsymbol) {
-		this.fillsymbol = fillsymbol;
-	}
+    public String toString() {
+        String result = "Тип фигуры: " + name + "\n";
+        result += "Размер: " + size + "\n";
+        result += "Заливка: " + pouring + "\n";
+        result += "Символ заливки: " + symbol + "\n";
+        result += "Пустой символ заливки: " + spaceSymbol + "\n";
 
-	
+        return result;
+    }
 }
