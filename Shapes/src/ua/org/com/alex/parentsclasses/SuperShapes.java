@@ -7,13 +7,26 @@ public abstract class SuperShapes {
 	private char pouring;
 	private char fillsymbol;
 
-	public void printToConsole(String name, int size, char pouring, char fillsymbol) {
+	public abstract double calculatePerimeter();
 
-		System.out.println("New Shape");
+	public abstract double calculateArea();
+
+	public SuperShapes(String name, int size, char pouring, char fillsymbol) {
+	        this.name = name;
+	        this.size = size;
+	        this.pouring = pouring;
+	        this.fillsymbol = fillsymbol;
 	}
 
-	
-	
+	public void displayInfo() {
+		System.out.println("Тип фигуры: " + name);
+		System.out.println("Размер: " + size);
+		System.out.println("Заливка: " + pouring);
+		System.out.println("Символ заливки: " + fillsymbol);
+		System.out.println("Площадь: " + calculateArea());
+		System.out.println("Периметр: " + calculatePerimeter());
+	}
+
 	public String getName() {
 
 		return name;
@@ -46,9 +59,6 @@ public abstract class SuperShapes {
 	public void fillsymbol(char fillsymbol) {
 		this.fillsymbol = fillsymbol;
 	}
-	
-	
-	
 
 	// ---------------------
 }
