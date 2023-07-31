@@ -60,5 +60,5 @@ public abstract class SuperShapes {
 		this.fillsymbol = fillsymbol;
 	}
 
-	// ---------------------
+	
 }
