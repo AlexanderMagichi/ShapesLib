@@ -17,11 +17,15 @@ public class Square extends SuperShapes {
 		this.spaceSymbol = spaceSymbol;
 
 	}
+	
+	
 
+	@Override
 	public int getSize() {
 		return size;
 	}
 
+	@Override
 	public void setSize(int size) {
 		this.size = size;
 	}
@@ -34,20 +38,47 @@ public class Square extends SuperShapes {
 		isFilled = filled;
 	}
 
+	@Override
 	public char getSymbol() {
 		return symbol;
 	}
 
+	@Override
 	public void setSymbol(char symbol) {
 		this.symbol = symbol;
 	}
 
+	@Override
 	public char getSpaceSymbol() {
 		return spaceSymbol;
 	}
 
+	@Override
 	public void setSpaceSymbol(char spaceSymbol) {
 		this.spaceSymbol = spaceSymbol;
 	}
+	
 
+	public void printShape() {
+		for (int i = 0; i < size; i++) {
+			for (int j = 0; j < size; j++) {
+				if (isFilled || i == 0 || i == size - 1 || j == 0 || j == size - 1) {
+					System.out.print(symbol);
+				} else {
+					System.out.print(spaceSymbol);
+				}
+			}
+			System.out.println();
+		}
+	}
+
+	@Override
+	public String toString() {
+		String result = super.toString(); 
+		result += "Заполненный: " + isFilled + "\n";
+		result += "Отображаемый символ: " + symbol + "\n";
+		result += "Символ пустого места: " + spaceSymbol + "\n";
+		return result;
+	}
 }
+
