@@ -1,7 +1,7 @@
 package ua.org.com.alex.libs.shapebuilder;
 
 public class Shape {
-
+//	меняю тип на стринг
 	public class TriangleBuilder {
 		private int sizeTriangle;
 		private char[][] triangle;
@@ -29,11 +29,10 @@ public class Shape {
 		}
 	}
 
-	
+
 	
 	public class ReverseTriangleBuilder {
 		private int sizeReverseTriangle;
-		private char[][] triangle;
 		private char[][] reverseTriangle;
 
 		// переменная в которую надо из фронта подставить значение ReverseTriangleBuilder
