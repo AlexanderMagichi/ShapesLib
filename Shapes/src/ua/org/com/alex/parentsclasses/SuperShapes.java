@@ -5,30 +5,18 @@ public abstract class SuperShapes {
 	private String name;
 	private int size;
 	private char pouring;
-	private char fillsymbol;
+	private char spaceSymbol;
+	private char symbol;
 
-	public abstract double calculatePerimeter();
+	protected SuperShapes(String name, int size, char pouring, char symbol, char spaceSymbol) {
+		this.name = name;
+		this.size = size;
+		this.pouring = pouring;
+		this.symbol = symbol;
 
-	public abstract double calculateArea();
-
-	public SuperShapes(String name, int size, char pouring, char fillsymbol) {
-	        this.name = name;
-	        this.size = size;
-	        this.pouring = pouring;
-	        this.fillsymbol = fillsymbol;
-	}
-
-	public void displayInfo() {
-		System.out.println("Тип фигуры: " + name);
-		System.out.println("Размер: " + size);
-		System.out.println("Заливка: " + pouring);
-		System.out.println("Символ заливки: " + fillsymbol);
-		System.out.println("Площадь: " + calculateArea());
-		System.out.println("Периметр: " + calculatePerimeter());
 	}
 
 	public String getName() {
-
 		return name;
 	}
 
@@ -44,21 +32,37 @@ public abstract class SuperShapes {
 		this.size = size;
 	}
 
-	public char pouring() {
+	public char getPouring() {
 		return pouring;
 	}
 
-	public void pouring(char pouring) {
+	public void setPouring(char pouring) {
 		this.pouring = pouring;
 	}
 
-	public char fillsymbol() {
-		return pouring;
+	public char getSymbol() {
+		return symbol;
 	}
 
-	public void fillsymbol(char fillsymbol) {
-		this.fillsymbol = fillsymbol;
+	public void setSymbol(char symbol) {
+		this.symbol = symbol;
 	}
 
-	// ---------------------
+	public char getSpaceSymbol() {
+		return spaceSymbol;
+	}
+
+	public void setSpaceSymbol(char spaceSymbol) {
+		this.spaceSymbol = spaceSymbol;
+	}
+
+	public String toString() {
+		String result = "Тип фигуры: " + name + "\n";
+		result += "Размер: " + size + "\n";
+		result += "Заливка: " + pouring + "\n";
+		result += "Символ заливки: " + symbol + "\n";
+		result += "Пустой символ заливки: " + spaceSymbol + "\n";
+
+		return result;
+	}
 }
