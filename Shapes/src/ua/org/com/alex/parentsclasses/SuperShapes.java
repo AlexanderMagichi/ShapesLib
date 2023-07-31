@@ -11,7 +11,7 @@ public abstract class SuperShapes {
 
 	public abstract double calculateArea();
 
-	public SuperShapes(String name, int size, char pouring, char fillsymbol) {
+	protected SuperShapes(String name, int size, char pouring, char fillsymbol) {
 	        this.name = name;
 	        this.size = size;
 	        this.pouring = pouring;
