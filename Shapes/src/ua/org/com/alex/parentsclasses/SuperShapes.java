@@ -12,7 +12,7 @@ public abstract class SuperShapes {
 		this.name = name;
 		this.size = size;
 		this.pouring = pouring;
-		this.symbol = symbol;
+		this.symbol = symbol; 
 
 	}
 
@@ -65,4 +65,8 @@ public abstract class SuperShapes {
 
 		return result;
 	}
+	
+	  public void printShape() {
+	        System.out.println(this.toString());
+	    }
 }
