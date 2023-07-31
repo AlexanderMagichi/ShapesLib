@@ -12,6 +12,8 @@ public abstract class SuperShapes {
 		System.out.println("New Shape");
 	}
 
+	
+	
 	public String getName() {
 
 		return name;
