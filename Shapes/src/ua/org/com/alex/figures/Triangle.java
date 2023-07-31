@@ -1,4 +1,4 @@
-package ua.org.com.alex.Figeres;
+package ua.org.com.alex.figures;
 
 import ua.org.com.alex.parentsclasses.SuperShapes;
 
