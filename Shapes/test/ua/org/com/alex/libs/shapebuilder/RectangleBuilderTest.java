@@ -7,25 +7,21 @@ import org.junit.jupiter.api.Test;
 
 public class RectangleBuilderTest {
 
-    @Test
-    public void testBuildRectangle() {
-        // Arrange
-        int rows = 4;
-        int columns = 6;
-        char[][] expectedRectangle = {
-            {'*', '*', '*', '*', '*', '*'},
-            {'*', '*', '*', '*', '*', '*'},
-            {'*', '*', '*', '*', '*', '*'},
-            {'*', '*', '*', '*', '*', '*'}
-        };
+	@Test
+	public void testBuildRectangle() {
+		// Arrange
+		int rows = 4;
+		int columns = 6;
+		char[][] expectedRectangle = { { '*', '*', '*', '*', '*', '*' }, { '*', '*', '*', '*', '*', '*' },
+				{ '*', '*', '*', '*', '*', '*' }, { '*', '*', '*', '*', '*', '*' } };
 
-        Shape.RectangleBuilder rectangleBuilder = new Shape().new RectangleBuilder(rows, columns);
+		Shape.RectangleBuilder rectangleBuilder = new Shape().new RectangleBuilder(rows, columns);
 
-        // Act
-        rectangleBuilder.buildRectangle();
-        char[][] actualRectangle = rectangleBuilder.getRectangle();
+		// Act
+		rectangleBuilder.buildRectangle();
+		char[][] actualRectangle = rectangleBuilder.getRectangle();
 
-        // Assert
-        assertArrayEquals(expectedRectangle, actualRectangle);
-    }
+		// Assert
+		assertArrayEquals(expectedRectangle, actualRectangle);
+	}
 }
