@@ -18,13 +18,15 @@ public abstract class SuperShapes {
 	        this.fillsymbol = fillsymbol;
 	}
 
-	public void displayInfo() {
-		System.out.println("Тип фигуры: " + name);
-		System.out.println("Размер: " + size);
-		System.out.println("Заливка: " + pouring);
-		System.out.println("Символ заливки: " + fillsymbol);
-		System.out.println("Площадь: " + calculateArea());
-		System.out.println("Периметр: " + calculatePerimeter());
+	@Override
+	public String toString() {
+	    String result = "Тип фигуры: " + name + "\n";
+	    result += "Размер: " + size + "\n";
+	    result += "Заливка: " + pouring + "\n";
+	    result += "Символ заливки: " + fillsymbol + "\n";
+	    result += "Площадь: " + calculateArea() + "\n";
+	    result += "Периметр: " + calculatePerimeter() + "\n";
+	    return result;
 	}
 
 	public String getName() {
