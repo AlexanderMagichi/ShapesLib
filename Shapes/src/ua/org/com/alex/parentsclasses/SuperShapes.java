@@ -2,12 +2,12 @@ package ua.org.com.alex.parentsclasses;
 
 public abstract class SuperShapes {
 
-	public String name;
-	public int size;
+	private String name;
+	private int size;
 
 	public void printToConsole(String name, int size) {
 
-		System.out.println();
+		System.out.println("New Shape");
 	}
 
 	public String getName() {
