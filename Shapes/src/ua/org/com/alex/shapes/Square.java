@@ -25,10 +25,10 @@ public class Square extends Shape {
 
 	@Override
 	public String toString() {
-		String result = super.toString(); 
-		result += "Заполненный: " + isFilled + "\n";
-		result += "Отображаемый символ: " + symbol + "\n";
-		result += "Символ пустого места: " + spaceSymbol + "\n";
+		String result = super.toString();
+		result += "Filled: " + isFilled + "\n";
+		result += "Display character: " + symbol + "\n";
+		result += "Empty space character: " + spaceSymbol + "\n";
 		return result;
 	}
 }

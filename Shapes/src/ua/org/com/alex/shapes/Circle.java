@@ -1,25 +1,39 @@
 package ua.org.com.alex.shapes;
 
+public abstract class Circle extends Shape {
 
-public class Circle extends Shape {
+	public Circle(int size, boolean isFilled, char symbol, char spaceSymbol) {
+		super(size, isFilled, symbol, spaceSymbol);
+	}
 
-    public Circle(int size, boolean isFilled, char symbol, char spaceSymbol) {
-        super(size, isFilled, symbol, spaceSymbol);
-    }
+	public Circle(int size, boolean isFilled, char symbol) {
+		super(size, isFilled, symbol);
+	}
 
-    public Circle(int size, boolean isFilled, char symbol) {
-        super(size, isFilled, symbol);
-    }
+	protected void drawShape() {
+		double radius = size / 2.0;
 
-    @Override
-    protected void drawShape() {
-        System.out.println(" **** ");
-        System.out.println("******");
-        System.out.println(" **** ");
-    }
+		for (int i = 0; i < size; i++) {
+			for (int j = 0; j < size; j++) {
+				double distance = Math.sqrt((i - radius) * (i - radius) + (j - radius) * (j - radius));
 
-    public void specialCircleMethod(){
-        System.out.println("specialCircleMethod");
-    }
+				if (isFilled || distance <= radius) {
+					System.out.print(symbol);
+				} else {
+					System.out.print(spaceSymbol);
+				}
+			}
+			System.out.println();
+		}
+	}
+
+	@Override
+	public String toString() {
+		String result = super.toString();
+		result += "Filled: " + isFilled + "\n";
+		result += "Display character: " + symbol + "\n";
+		result += "Empty space character: " + spaceSymbol + "\n";
+		return result;
+	}
 
 }
