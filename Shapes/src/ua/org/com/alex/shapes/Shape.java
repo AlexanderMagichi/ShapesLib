@@ -1,5 +1,7 @@
 package ua.org.com.alex.shapes;
 
+import java.awt.Graphics2D;
+
 public abstract class Shape {
     protected int size;
     protected boolean isFilled;
@@ -24,6 +26,8 @@ public abstract class Shape {
     }
 
     protected abstract void drawShape();
+    
+    public abstract void drawShape(Graphics2D g2d);
 
     public void printShape(){
         String line = generateLine();
@@ -72,6 +76,8 @@ public abstract class Shape {
         }
         return sb.toString();
     }
+
+	
 
 
 }

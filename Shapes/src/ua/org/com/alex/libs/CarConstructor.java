@@ -10,8 +10,10 @@ import java.util.List;
 import java.util.Random;
 
 public class CarConstructor {
+	@SuppressWarnings("unused")
 	public List<Shape> generateRandomCar() {
 		Shape circle = new Circle(5, false, '*', ' ');
+		Shape triangle = new Triangle(5, false, '*', ' ');
 		Shape square = new Square(6, true, 'X');
 		List<Shape> shapes = new ArrayList<>();
 		shapes.add(circle);

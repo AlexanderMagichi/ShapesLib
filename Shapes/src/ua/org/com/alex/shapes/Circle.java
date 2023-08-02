@@ -1,6 +1,8 @@
 package ua.org.com.alex.shapes;
 
-public abstract class Circle extends Shape {
+import java.awt.Graphics2D;
+
+public class Circle extends Shape {
 
 	public Circle(int size, boolean isFilled, char symbol, char spaceSymbol) {
 		super(size, isFilled, symbol, spaceSymbol);
@@ -34,6 +36,12 @@ public abstract class Circle extends Shape {
 		result += "Display character: " + symbol + "\n";
 		result += "Empty space character: " + spaceSymbol + "\n";
 		return result;
+	}
+
+	@Override
+	public void drawShape(Graphics2D g2d) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
