@@ -25,17 +25,6 @@ public abstract class Shape {
         this(size, isFilled, symbol, ' ');
     }
 
-    protected abstract void drawShape();
-    
-    public abstract void drawShape(Graphics2D g2d);
-
-    public void printShape(){
-        String line = generateLine();
-        System.out.println(line);
-        drawShape();
-        System.out.println(line);
-    }
-
 
     public int getSize() {
         return size;
@@ -69,13 +58,21 @@ public abstract class Shape {
         this.spaceSymbol = spaceSymbol;
     }
 
-    private String generateLine() {
+    @SuppressWarnings("unused")
+	private String generateLine() {
         StringBuilder sb = new StringBuilder("");
         for (int i = 0; i < size; i++) {
             sb.append("=");
         }
         return sb.toString();
     }
+
+	public void drawShape(Graphics2D g2d) {
+		
+	}
+
+	public void printShape() {
+	}
 
 	
 

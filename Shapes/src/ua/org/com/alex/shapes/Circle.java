@@ -1,7 +1,5 @@
 package ua.org.com.alex.shapes;
 
-import java.awt.Graphics2D;
-
 public class Circle extends Shape {
 
 	public Circle(int size, boolean isFilled, char symbol, char spaceSymbol) {
@@ -38,10 +36,5 @@ public class Circle extends Shape {
 		return result;
 	}
 
-	@Override
-	public void drawShape(Graphics2D g2d) {
-		// TODO Auto-generated method stub
-		
-	}
 
 }

@@ -1,7 +1,5 @@
 package ua.org.com.alex.shapes;
 
-import java.awt.Graphics2D;
-
 public class Square extends Shape {
 
 	public Square(int size, boolean isFilled, char symbol, char spaceSymbol) {
@@ -11,7 +9,6 @@ public class Square extends Shape {
 		super(size, isFilled, symbol);
 	}
 
-	@Override
 	protected void drawShape() {
 		for (int i = 0; i < size; i++) {
 			for (int j = 0; j < size; j++) {
@@ -33,10 +30,6 @@ public class Square extends Shape {
 		result += "Empty space character: " + spaceSymbol + "\n";
 		return result;
 	}
-	@Override
-	public void drawShape(Graphics2D g2d) {
-		// TODO Auto-generated method stub
-		
-	}
+
 }
 

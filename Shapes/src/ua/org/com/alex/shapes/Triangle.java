@@ -1,7 +1,5 @@
 package ua.org.com.alex.shapes;
 
-import java.awt.Graphics2D;
-
 public class Triangle extends Shape {
 
 	public Triangle(int size, boolean isFilled, char symbol, char spaceSymbol) {
@@ -12,7 +10,6 @@ public class Triangle extends Shape {
 		super(size, isFilled, symbol);
 	}
 
-	@Override
 	protected void drawShape() {
 		for (int i = 0; i < size; i++) {
 			for (int j = 0; j < 2 * size - 1; j++) {
@@ -43,9 +40,4 @@ public class Triangle extends Shape {
 		return result;
 	}
 
-	@Override
-	public void drawShape(Graphics2D g2d) {
-		// TODO Auto-generated method stub
-		
-	}
 }

@@ -1,4 +1,4 @@
-package ua.org.com.alex.anotherClient;
+package ua.org.com.alex.anotherclient;
 
 import ua.org.com.alex.libs.CarConstructor;
 import ua.org.com.alex.shapes.Shape;
