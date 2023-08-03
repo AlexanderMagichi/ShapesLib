@@ -11,7 +11,7 @@ public class Main {
 		List<Shape> shapes = hc.generateRandomCar();
 
 		for (int i = 0; i < shapes.size(); i++) {
-			shapes.get(i);
+			Shape shape = shapes.get(i);
 		}
 
 	}

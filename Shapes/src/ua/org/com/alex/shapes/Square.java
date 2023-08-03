@@ -23,7 +23,7 @@ public class Square extends Shape {
 					shapeArray[i][j] = spaceSymbol;
 				}
 			}
-		}
+		}  
 	}
 
 	@Override
