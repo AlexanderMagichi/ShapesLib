@@ -4,21 +4,25 @@ public class Square extends Shape {
 
 	public Square(int size, boolean isFilled, char symbol, char spaceSymbol) {
 		super(size, isFilled, symbol, spaceSymbol);
+		drawShape();
 	}
+
 	public Square(int size, boolean isFilled, char symbol) {
 		super(size, isFilled, symbol);
+		drawShape();
 	}
 
 	protected void drawShape() {
+		shapeArray = new char[size][size];
+
 		for (int i = 0; i < size; i++) {
 			for (int j = 0; j < size; j++) {
 				if (isFilled || i == 0 || i == size - 1 || j == 0 || j == size - 1) {
-					System.out.print(symbol);
+					shapeArray[i][j] = symbol;
 				} else {
-					System.out.print(spaceSymbol);
+					shapeArray[i][j] = spaceSymbol;
 				}
 			}
-			System.out.println();
 		}
 	}
 
@@ -32,4 +36,3 @@ public class Square extends Shape {
 	}
 
 }
-

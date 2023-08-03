@@ -33,7 +33,8 @@ public class ShapePrinter {
             this.shapes = shapes; 
         }
 
-        @Override
+        @SuppressWarnings("unused")
+		@Override
         public int print(Graphics graphics, PageFormat pageFormat, int pageIndex) throws PrinterException {
             if (pageIndex >= shapes.size()) { // Check if the page index is greater than the number of shapes
                 return Printable.NO_SUCH_PAGE; // Return constant Printable.NO_SUCH_PAGE indicating no such page
@@ -45,7 +46,7 @@ public class ShapePrinter {
             // Draw the shape on the graphics printer context
             Graphics2D g2d = (Graphics2D) graphics; // Casting a Graphics object to a Graphics2D https://stackoverflow.com/questions/179415/java2d-is-it-always-safe-to-cast-graphics-into-graphics2d
             g2d.translate(pageFormat.getImageableX(), pageFormat.getImageableY()); 
-            shape.drawShape(g2d); 
+        
             
             return Printable.PAGE_EXISTS; // The constant Printable.PAGE_EXISTS is returned indicating that the page exists and will be printed.
         }
