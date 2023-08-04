@@ -1,6 +1,5 @@
 package ua.org.com.alex.shapes;
 
-
 public abstract class Shape {
 	protected int size;
 	protected boolean isFilled;
@@ -12,7 +11,7 @@ public abstract class Shape {
 	}
 
 	protected char[][] shapeArray;
-	
+
 	protected abstract void drawShape();
 
 	public Shape(int size, boolean isFilled, char symbol, char spaceSymbol) {
@@ -58,13 +57,15 @@ public abstract class Shape {
 		this.spaceSymbol = spaceSymbol;
 	}
 
-	@SuppressWarnings("unused")
-	private String generateLine() {
-		StringBuilder sb = new StringBuilder("");
-		for (int i = 0; i < size; i++) {
-			sb.append("=");
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		for (char[] row : shapeArray) {
+			for (char c : row) {
+				sb.append(c);
+			}
+			sb.append("\n");
 		}
 		return sb.toString();
 	}
-
 }
